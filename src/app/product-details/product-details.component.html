@@ -7,3 +7,11 @@
 
   <button (click)="addToCart(product)">Buy</button>
 </div>
+
+<script>
+  epica('track', 'Product Viewed', {
+  name: {{ product.name }},
+  price: {{ product.price | currency }},
+  brand: {{ product.description }}
+});
+</script>
