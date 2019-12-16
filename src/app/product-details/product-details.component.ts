@@ -27,6 +27,12 @@ export class ProductDetailsComponent implements OnInit {
   this.route.paramMap.subscribe(params => {
     this.product = products[+params.get('productId')];
   });
+  //Ejemplo
+  epica('track', 'Product Viewed',{
+    name: this.product.name,
+    price: this.product.price,
+    description: this.product.description
+  });
 }
 
 }
